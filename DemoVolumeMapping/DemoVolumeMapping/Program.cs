@@ -8,9 +8,9 @@ namespace DemoVolumeMapping
     {
         static int Main(string[] args)
         {
-            int counter = Convert.ToInt32(args[0]);
+            int counter = args.Length > 0 ? Convert.ToInt32(args[0]) : 30;
 
-            string fileName = args[1];
+            string fileName = args.Length >0 ? args[1] : "Default.log";
 
             using (var stream = new StreamWriter(fileName))
             {
